@@ -11,4 +11,12 @@ describe ('#project') do
     test2 = Triangle.new(2,2,2)
     expect(test2.checker).to(eq("equilateral"))
   end
+    it("should find an isosceles triangle if two sides are equal")do
+      test2 = Triangle.new(2,2,3)
+      expect(test2.checker).to(eq("isosceles"))
+  end
+  it("should find a scalene triangle if no sides are equal")do
+    test2 = Triangle.new(2,4,3)
+    expect(test2.checker).to(eq("scalene"))
+end
 end
